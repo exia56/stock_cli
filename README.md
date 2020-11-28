@@ -28,8 +28,9 @@
 - 搜尋 代號`1102` 由`2020年1月1日`～`2020年11月30日` 之間的資料 （視 Load 指令儲存的資料而定）
   > QueryByIdAndDateBetween 1102 2020/01/01 2020/11/30
 
-![載入範例]](./LoadExample.jpg)
-![搜尋範例]](./QueryByIdAndDateBetween.jpg)
+![載入範例](LoadExample.jpg)
+
+![搜尋範例](QueryByIdAndDateBetween.jpg)
 
 ## 測試
 
