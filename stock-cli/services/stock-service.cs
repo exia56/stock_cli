@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Query;
 
 namespace stock_cli
 {
-  class StockService
+  public class StockService
   {
     private readonly IStockRepo stockRepo;
     private readonly MyContext dbContext;

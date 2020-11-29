@@ -36,7 +36,14 @@ namespace stock_cli
       var ranges = Enumerable.Range(1, cacheDays).Select(async (idx) =>
       {
         var date = DateTime.Now.AddDays(-1 * idx);
-        await stockService.Load(new DateTime(date.Year, date.Month, date.Day));
+        if (date.DayOfWeek != DayOfWeek.Sunday && date.DayOfWeek != DayOfWeek.Saturday)
+        {
+          await stockService.Load(new DateTime(date.Year, date.Month, date.Day));
+        }
+        else
+        {
+          Console.WriteLine("Weekend hasn't data to load");
+        }
       });
       Task.WaitAll(ranges.ToArray(), -1);
       Console.WriteLine("Cache done");

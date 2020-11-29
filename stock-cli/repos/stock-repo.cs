@@ -50,7 +50,7 @@ namespace stock_cli
     Task<StockResponse<StockData>> getStockList(DateTime date);
   }
 
-  class StockRepo : IStockRepo
+  public class StockRepo : IStockRepo
   {
     private readonly string urlTemplate = "https://www.twse.com.tw/exchangeReport/BWIBBU_d?{0}";
 
